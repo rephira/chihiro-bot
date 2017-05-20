@@ -35,3 +35,13 @@ const
   SURL = (process.env.FBM_SURL) ?
   process.env.FBM_SURL :
   config.get('sURL');
+
+//stop process if verification parameters are missing
+if (!(APPSEC && VALTOKEN && PAGETOKEN && SURL)) {
+  console.error("Missing config values");
+  process.exit(1);
+}
+
+app.get('/webhook', function (req, res) {
+  if (req.query['hub.mode'] === 'subscribe' &&)
+})

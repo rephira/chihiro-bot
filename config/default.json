@@ -1,6 +1,6 @@
 {
-  "appSec": "app secret",
-  "valToken": "validation token",
-  "pageToken": "page access token",
-  "sURL": "server url"
+  "appSec": "",
+  "valToken": "",
+  "pageToken": "",
+  "sURL": ""
 }
