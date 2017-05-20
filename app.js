@@ -43,5 +43,7 @@ if (!(APPSEC && VALTOKEN && PAGETOKEN && SURL)) {
 }
 
 app.get('/webhook', function (req, res) {
-  if (req.query['hub.mode'] === 'subscribe' &&)
+  if (req.query['hub.mode'] === 'subscribe' && req.query['hub.verify_token'] === VALTOKEN) {
+    console.log(req.length);
+  }
 })
