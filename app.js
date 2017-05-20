@@ -15,7 +15,7 @@ const
 let app = express();
 app.set('port', process.env.PORT || 5000); 
 app.set('view engine', 'ejs'); 
-//app.use(bodyParser.json({ check: checkReqSign }));
+app.use(bodyParser.json(/*{ check: checkReqSign }*/));
 app.use(express.static('public'));
 
 //verification parameters
@@ -44,6 +44,11 @@ if (!(APPSEC && VALTOKEN && PAGETOKEN && SURL)) {
 
 app.get('/webhook', function (req, res) {
   if (req.query['hub.mode'] === 'subscribe' && req.query['hub.verify_token'] === VALTOKEN) {
-    console.log(req.length);
+    console.log("Validation tokens matched. Checking Webhook.")
+    console.log(res.status())
+    res.send(req.query['hub.challenge'])
+  } else {
+    console.error("Validation tokens did not match.")
+    res.senStatus(403);
   }
 })
