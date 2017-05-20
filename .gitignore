@@ -46,5 +46,7 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-#node_js modules
+#node.js modules
 node_modules
+
+#FB Credentials

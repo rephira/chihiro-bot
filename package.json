@@ -19,5 +19,12 @@
     "url": "https://github.com/rephira/chihiro-bot/issues"
   },
   "homepage": "https://github.com/rephira/chihiro-bot#readme",
-  "dependencies": {}
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "config": "^1.26.1",
+    "crypto": "0.0.3",
+    "express": "^4.15.3",
+    "https": "^1.0.0",
+    "request": "^2.81.0"
+  }
 }
