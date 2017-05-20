@@ -45,10 +45,14 @@ if (!(APPSEC && VALTOKEN && PAGETOKEN && SURL)) {
 app.get('/webhook', function (req, res) {
   if (req.query['hub.mode'] === 'subscribe' && req.query['hub.verify_token'] === VALTOKEN) {
     console.log("Validation tokens matched. Checking Webhook.")
-    console.log(res.status())
+    console.log(res.statusCode)
     res.send(req.query['hub.challenge'])
   } else {
     console.error("Validation tokens did not match.")
-    res.senStatus(403);
+    res.sendStatus(403);
   }
-})
+});
+
+app.listen(app.get('port'), function () {
+  console.log('running on port', app.get('port'))
+});
