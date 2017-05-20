@@ -1,0 +1,23 @@
+{
+  "name": "chihiro-bot",
+  "version": "0.0.1",
+  "description": "bot designed to aid deresute producers",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rephira/chihiro-bot.git"
+  },
+  "keywords": [
+    "chatbot"
+  ],
+  "author": "rephira",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rephira/chihiro-bot/issues"
+  },
+  "homepage": "https://github.com/rephira/chihiro-bot#readme",
+  "dependencies": {}
+}
