@@ -49,3 +49,4 @@ Temporary Items
 #node.js modules
 node_modules
 
+config/default.json
